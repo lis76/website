@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Website</title>
+    <title>DiamondDolls</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,10 +10,24 @@
   </head>
 
   <body>
+  <div class="container">
 
-  <%= link_to "Главная", root_path %>
-  <%= link_to "Об альянсе", pages_about_path %>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <%= link_to "Главная", root_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Об альянсе", pages_about_path %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
 
     <%= yield %>
+  </div>
   </body>
 </html>
