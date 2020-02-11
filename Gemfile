@@ -13,6 +13,7 @@ gem "jbuilder", "~> 2.7"
 gem "bootstrap", "~> 4.4", ">= 4.4.1"
 gem "bundler", "~> 2.1", ">= 2.1.4"
 gem "bootsnap", ">= 1.4.2", require: false
+gem "devise", "~> 4.7", ">= 4.7.1"
 
 group :development do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
