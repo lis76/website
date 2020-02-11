@@ -1,8 +1,24 @@
+$display-5: size 3rem;
+$jumbotron-bg: rgba(255,255,255, 0.3);
 @import "bootstrap";
-
 .container-background {
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-image: url(image_path("background.jpg"));
+  background-image: url(image_path('background.jpg'));
+
+}
+.jumbotron1 {
+  color: #000;
+}
+
+.jumbotron-landing {
+  width: 50%;
+}
+
+.color_gold {
+  color: #FF0000;
+}
+.color_gold1 {
+  color: #fdfdfd;
 }
