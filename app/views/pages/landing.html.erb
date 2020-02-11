@@ -1,10 +1,16 @@
-<div class="jumbotron jumbotron-landing">
-  <h1 class="display-4">Добро пожаловать на сайт альянса</h1>
-  <h1 class="display-3 color_gold">DiamondDolls</h1>
-  <h3 class="h3">Готовы вступить и начать сражаться?</h3>
-  <hr class="my-4">
-  <h3 class="h3">Кто с мечом к нам придет — от меча и погибнет</h3>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Создать аккаунт</a>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Войти</a>
-</div>
+<% if user_signed_in? %>
+
+  <% else %>
+  <div class="jumbotron jumbotron-landing">
+    <h1 class="display-4">Добро пожаловать на сайт альянса</h1>
+    <h1 class="display-3 color_gold">DiamondDolls</h1>
+    <h3 class="h3">Готовы вступить и начать сражаться?</h3>
+    <hr class="my-4">
+    <h3 class="h3">Кто с мечом к нам придет — от меча и погибнет</h3>
+    <%= link_to "Создать аккаунт", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Войти", new_user_session_path, class: "btn btn-primary btn-lg" %>
+  </div>
+  <% end %>
+
+
 

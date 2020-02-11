@@ -21,6 +21,12 @@
           <li class="nav-item nav-link active">
            <h3> <%= link_to "Об альянсе", pages_about_path %> </h3>
           </li>
+
+          <% if user_signed_in? %>
+          <li class="nav-item nav-link active">
+            <h3> <%= link_to "Выход", destroy_user_session_path, method: :delete %> </h3>
+          </li>
+            <% end %>
         </ul>
         </nav>
 
