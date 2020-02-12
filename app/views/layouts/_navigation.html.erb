@@ -1,0 +1,58 @@
+<% if user_signed_in? %>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar navbar navbar-light" style="background-color: #FF7373;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01 container-login">
+          <a class="navbar-brand text-logo" href="#"><h3>DiamondDolls</h3></a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <%= link_to 'Главная', root_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Об альянсе", pages_about_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link" %>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+  <% else %>
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar navbar navbar-light" style="background-color: #FF7373;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01 container-login">
+        <a class="navbar-brand text-logo" href="#"><h3>DiamondDolls</h3></a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <%= link_to 'Главная', root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Об альянсе", pages_about_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Войти", new_user_session_path, class: "nav-link" %>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<% end %>

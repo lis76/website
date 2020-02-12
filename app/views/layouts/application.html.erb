@@ -4,39 +4,34 @@
     <title>DiamondDolls</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <div class="container-fluid container-background">
-      <div class="container">
 
-        <nav class="navbar navbar-light" style="background-color: rgba(255,0,0, 0.3);">
-        <ul class="nav">
-          <li class="nav-item nav-link active">
-            <h3> <%= link_to 'Главная', root_path %> </h3>
-          </li>
-          <li class="nav-item nav-link active">
-           <h3> <%= link_to "Об альянсе", pages_about_path %> </h3>
-          </li>
+    <% if user_signed_in? %>
+    <div class="container-fluid container-login">
 
-          <% if user_signed_in? %>
-          <li class="nav-item nav-link active">
-            <h3> <%= link_to "Выход", destroy_user_session_path, method: :delete %> </h3>
-          </li>
-            <% end %>
-        </ul>
-        </nav>
+      <% else %>
+      <div class="container-fluid container-background container-login">
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+    <% end %>
 
-        <%= yield %>
+      <%= render "layouts/navigation" %>
+        <div class="container">
 
+
+
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+          <%= yield %>
+
+        </div>
       </div>
-  </div>
+    </div>
   </body>
 
 </html>

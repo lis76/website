@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Crafty+Girls&display=swap);
 $jumbotron-bg: rgba(255,255,255, 0.3);
 @import "bootstrap";
 .container-background {
@@ -5,14 +6,23 @@ $jumbotron-bg: rgba(255,255,255, 0.3);
   height: 100vh;
   background-size: cover;
   background-image: url(image_path('background.jpg'));
-
 }
+
+  .container-login {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+.bg-transparnet {
+  background-color: rgba(255,115,115, 03);
+}
+
+.text-logo {
+  font-family: 'Crafty Girls', cursive;
+}
+
 .jumbotron1 {
   color: #000;
-}
-
-.jumbotron-landing {
-  width: 75%;
 }
 
 .color_gold {
