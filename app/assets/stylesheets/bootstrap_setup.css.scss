@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Crafty+Girls&display=swap);
 $jumbotron-bg: rgba(255,255,255, 0.3);
+$card-color: rgba(255,255,255, 0.5);
+$card-bg: rgba(255,255,255, 0.3);
 @import "bootstrap";
 .container-background {
   width: 100%;
@@ -13,8 +15,14 @@ $jumbotron-bg: rgba(255,255,255, 0.3);
     padding-left: 0;
   }
 
+.devise-form {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .bg-transparnet {
-  background-color: rgba(255,115,115, 03);
+  background-color: rgba(255,115,115, 0.3);
 }
 
 .text-logo {

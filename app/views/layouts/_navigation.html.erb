@@ -5,6 +5,7 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01 container-login">
           <a class="navbar-brand text-logo" href="#"><h3>DiamondDolls</h3></a>
@@ -13,7 +14,7 @@
               <%= link_to 'Главная', root_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "Об альянсе", pages_about_path, class: "nav-link" %>
+              <%= link_to current_user.email, edit_user_registration_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "nav-link" %>
@@ -56,3 +57,5 @@
   </nav>
 
 <% end %>
+
+<%#= console %>
